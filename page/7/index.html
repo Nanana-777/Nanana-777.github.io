@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gernando logs</title><meta name="description" content="努力搬家中"><meta name="author" content="Gernando logs"><meta name="copyright" content="Gernando logs"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/page/7/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><meta property="og:type" content="website"><meta property="og:title" content="Gernando logs"><meta property="og:url" content="http://yoursite.com/page/7/"><meta property="og:site_name" content="Gernando logs"><meta property="og:description" content="努力搬家中"><meta property="og:image" content="http://yoursite.com/img/avatar.gif"><meta property="article:published_time" content="2020-07-20T20:58:08.964Z"><meta property="article:modified_time" content="2020-07-20T20:58:08.964Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">118</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/game/"><i class="fa-fw fas fa-futbol"></i><span> Game</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/test1/"><i class="fa-fw fas fa-heart"></i><span> test1</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/07/18/UcmKzT.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Gernando logs</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/game/"><i class="fa-fw fas fa-futbol"></i><span> Game</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/test1/"><i class="fa-fw fas fa-heart"></i><span> test1</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Gernando logs</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/05/01/31ce8f96_1c913c0c1/" title="Liverpool FC is Gerrard plus ten more">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Liverpool FC is Gerrard plus ten more"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/01/31ce8f96_1c913c0c1/" title="Liverpool FC is Gerrard plus ten more">Liverpool FC is Gerrard plus ten more</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-05-01 21:22:18"><i class="far fa-calendar-alt"></i>2020-05-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ &quot;He has no natural replacement. Every side has a main reference, a home-grown player, someone who lives and breathes the club. 
+ “Other players come and go, but that player remains. Here, our reference player is Gerrard. Liverpool FC is Gerrard plus ten more. He’s irreplaceable.” 
+ 
+&quot;他是无人可取替的。每个地方都有一个标杆，一个土生土长，把俱乐部视作为生命的球员。&quot; 
+&quot;其他球员来来去去，但这个球员依旧留下。我们这里的标杆球员是杰拉德。利物浦俱乐部是杰拉德加十。他是独一无二的。&quot; 
+他来了，他来了，他带着经典金枯来了，那个吹杰拉德吹得丧心病狂的金发前锋来了 
+心急如焚想念拉德和他殴打皇马的费尔南多托雷斯，终于丧心病狂的吹起来 
+太会吹了，这就是值得表起 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/05/01/31ce8f96_1c90e9eda/" title="He's our captain">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="He's our captain"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/01/31ce8f96_1c90e9eda/" title="He's our captain">He's our captain</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-05-01 20:30:30"><i class="far fa-calendar-alt"></i>2020-05-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ &quot;I would like to see him take to the pitch as every important team has a special player. He’s our captain, and a player who over the past few years has led from the front. Gerrard is one of the few players who has consistently maintained himself at the top of the world game.&nbsp;&quot;&nbsp; 
+ 
+即将要踢皇马了，南多很想他和拉德也复出一起暴打皇马，当然不能他们也会努力打。看似非常普通的官腔吹包，但整理一下时间线，1月打糖糖时拉德喊话想南多陪他打糖糖，现在是南多喊话想拉德陪他打皇马，就有点可爱啦 
+20090210 
+“We will be up against an in-form team packed with great players” 
+Fernando Torres  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/30/31ce8f96_1c90ef4d5/" title="With Fernando and Stevie on the pitch">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="With Fernando and Stevie on the pitch"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/30/31ce8f96_1c90ef4d5/" title="With Fernando and Stevie on the pitch">With Fernando and Stevie on the pitch</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-30 19:55:06"><i class="far fa-calendar-alt"></i>2020-04-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ &nbsp;&quot;With Fernando and Stevie (Gerrard) on the pitch, we know that there is always a chance something special can happen.&quot; 
+ 
+唉，成积不好，排名第六，何以解忧，盼南多康复，盼能嗑包托，跟你一起嗑CP小马哥如此说道 
+20091217 
+Mascherano:&nbsp;“You can see the respect that other teams give Torres” 
+Liverpool’s Argentine midfielder hailed Fernando Torres' goalscoring return in Wednesday night’s 2-1 win at home to Wigan. The Spaniard, making his 100th appearance, hit the home side’s second of the night.&quot;It is so important  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/30/31ce8f96_1c90edf14/" title="Nice to line up against Stevie in the World Cup">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nice to line up against Stevie in the World Cup"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/30/31ce8f96_1c90edf14/" title="Nice to line up against Stevie in the World Cup">Nice to line up against Stevie in the World Cup</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-30 19:47:33"><i class="far fa-calendar-alt"></i>2020-04-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ &quot;We&nbsp;should&nbsp;go&nbsp;step&nbsp;by&nbsp;step&nbsp;and&nbsp;hopefully&nbsp;we&nbsp;can&nbsp;play&nbsp;in&nbsp;the&nbsp;final&nbsp;against&nbsp;England.&nbsp;It&nbsp;would&nbsp;be&nbsp;nice&nbsp;to&nbsp;line&nbsp;up&nbsp;against&nbsp;Stevie&nbsp;in&nbsp;the&nbsp;final.&quot; 
+ 
+印象中，这已经是你托第三篇还是第四篇，展望WC决赛上三喵碰头，由09年6月开始奶，你托奶的时间越长，就会变毒奶，还是搞鲜奶好了 
+&nbsp;20091009 
+Torres:&nbsp;“It&nbsp;would&nbsp;be&nbsp;nice&nbsp;to&nbsp;line&nbsp;up&nbsp;against&nbsp;Stevie&nbsp;in&nbsp;the&nbsp;World&nb ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/30/31ce8f96_1c90ec786/" title="We both enjoy setting each other up for goals">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We both enjoy setting each other up for goals"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/30/31ce8f96_1c90ec786/" title="We both enjoy setting each other up for goals">We both enjoy setting each other up for goals</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-30 19:13:42"><i class="far fa-calendar-alt"></i>2020-04-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ We&nbsp;enjoy&nbsp;playing&nbsp;with&nbsp;each&nbsp;other,&nbsp;we&nbsp;can&nbsp;both&nbsp;score&nbsp;goals&nbsp;and&nbsp;we&nbsp;both&nbsp;enjoy&nbsp;setting&nbsp;each&nbsp;other&nbsp;up&nbsp;for&nbsp;goals.&nbsp; 
+ 
+&quot;我们享受和对方一起踢球，我们能一同进球，我们都享受给对方助攻&quot; 
+太甜了，这就是前锋中场的CP，我没想到什么比你喂我一口，我喂你一口，大家一起吃饼更甜了！ 
+这新闻的背景是托妞在开场75秒一个直塞助攻给拉德破门，然后拉德上树超大声MUA了托妞一口，声音大得都被录进去了＞视频 
+全篇都是糖，建议全篇阅读！拉德这篇里用We代表我和南多怎样怎样想，像夫妻共识一样x 
+拉德说他和南多understanding&nbsp;and&nbsp;work&nbsp;together&nbsp;a&nbsp;lot&nbsp;in&nbsp;tra ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/30/31ce8f96_1c90ec91a/" title="I know I'm going to be biased">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="I know I'm going to be biased"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/30/31ce8f96_1c90ec91a/" title="I know I'm going to be biased">I know I'm going to be biased</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-30 17:40:32"><i class="far fa-calendar-alt"></i>2020-04-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ &quot;He's magic,&quot; Gerrard said.&nbsp;&quot;I know I'm going to be biased but I don't think that anyone will argue against me that he's the best striker in the world. 
+ 
+&quot;他是魔法。&quot; 
+&quot;我知道我是偏心，但我想没人会跟我争辩反对他是世上最棒的前锋。&quot; 
+甜巅的一周，同一周内以大比击败各自的母会死敌，托妞说Stevie令他成为这个夜晚里世上最开心的球员的几天后，便在上演了处刑维迪奇的名场面。 
+赛后拉德终于忍不住了，直接夸托是magic，非常可爱的说知道自己是偏心，但没人会跟他争辩托雷斯就是最上最佳的前锋。没有托在他身边踢球是令人沮丧的。 
+然而09年3月也是赛季的尾端了，这何时候包托才一起同场了9场（没记错最后一共踢了12场），所以托也回应了如果我们每周也是这样踢的话，会赢得更多场比赛，甚至还会赢得奖杯。 
+We were so close，so close，但 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/29/31ce8f96_1c90a886c/" title="The key was that piece of skill from Torres">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The key was that piece of skill from Torres"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/29/31ce8f96_1c90a886c/" title="The key was that piece of skill from Torres">The key was that piece of skill from Torres</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-29 23:12:05"><i class="far fa-calendar-alt"></i>2020-04-29</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ The key was that piece of skill from Fernando Torres, that is what he is all about. He is not just a goalscorer, he has fantastic awareness. 
+ 
+对糖糖的神仙连线赛后夸托，你托不止是射门员，还有技术，有意识！以及大湿他嗑包托嗑上头了！谁不上头呢，看看这连线！你托说得对，你们天生一对。&nbsp;&nbsp;
+![](https://s1.ax1x.com/2020/03/28/GAHb60.gif)
+ 
+ 
+20090127 
+Liverpool’s goalscorer from the Everton FA Cup clash, and club manager Rafa Benitez, both heralded the Spanish striker’s assist in the Reds equaliser in Sunday’s draw. The two players, who built up an excellent ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/29/31ce8f96_1c90a8808/" title="Steve Gerrard isn't one to take a dive">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Steve Gerrard isn't one to take a dive"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/29/31ce8f96_1c90a8808/" title="Steve Gerrard isn't one to take a dive">Steve Gerrard isn't one to take a dive</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-29 22:55:28"><i class="far fa-calendar-alt"></i>2020-04-29</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ There must have been some contact, because Steve Gerrard isn't one to take a dive.&nbsp; 
+ 
+不知说什么好的托妞迷惑发言，08年和马竞对上，军得益一个争议点球补时扳平，马卡又挑事问你觉得是点球吗？ 
+那一定是有接触的，因为杰拉德不是一个会跳水的人。我不知道这接触是否足够让裁判判罚，但总括来就这是一个有利于我们的判决。 
+ 
+配合杰拉德不喜欢我跳水，我不跳了的金桔食用更佳 
+这篇其他是竞托糖，每次看到问会回西甲吗？会在马竞退伇吗？都觉得好感概 
+ 
+20081010 
+Torres:&nbsp;“Liverpool had everything I needed for me to continue developing as a player” 
+Welcome to the first part of Marca’s exclusive interview with Fernando Torres. The Spanish daily sports newspaper dedicated  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/29/31ce8f96_1c90a71b0/" title="Torres praises team-mates">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Torres praises team-mates"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/29/31ce8f96_1c90a71b0/" title="Torres praises team-mates">Torres praises team-mates</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-29 22:15:50"><i class="far fa-calendar-alt"></i>2020-04-29</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content"> 
+ -Do you think that you could be up there again next year?The hardest part is not getting there, it’s staying there. Look at Gerrard. He has never won the award, and he deserves it as much as anyone, but he is always there with the best. My team-mate Stevie is the best role model there is.”&nbsp; 
+ 
+论你托怎样吹没拿到金球的杰拉德的八十九个方式 
+人家在问你托觉得下年进前十吗？结果去吹拉德了，最难是留在这里，你看看杰拉德，他从来都没赢过金球，他和其他人一样值得拿&nbsp;，但他永远都在名单里。我的队友就是金球奖的最佳典范 
+想想之后你托提到金球奖之旅，就觉得当年嘴巴真的紧，私人飞机的事多甜，x年后才告诉你们 
+ 
+20081203 
+Torres praises team-mates  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/29/31ce8f96_1c90a7c35/" title="Ian Rush: “Fernando Torres is something special”">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ian Rush: “Fernando Torres is something special”"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/29/31ce8f96_1c90a7c35/" title="Ian Rush: “Fernando Torres is something special”">Ian Rush: “Fernando Torres is something special”</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-29 21:51:36"><i class="far fa-calendar-alt"></i>2020-04-29</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Text/">Text</a></span></div><div class="content">名宿跟你嗑CP系列罢了，纯粹存个记录，CP一代传一代 
+20080605 
+Kop legend Ian Rush confirmed in an interview on the official club website that Premier League defenders will be more wary of the threat of Torres in the next campaign.&nbsp;“I expect it to be tougher for him next season but, from what we've already seen, we know he will be a success again. Opposition players have tried every trick in the book in an attempt to put him off his stride this season. They've tried to outmuscle and kick him out of the game but he' ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Gernando logs</div><div class="author-info__description">努力搬家中</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">Articles</div><div class="length_num">118</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">Tags</div><div class="length_num">14</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">Categories</div><div class="length_num">3</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="Bookmark"><i class="fas fa-bookmark"></i><span>Bookmark</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/07/20/20080616LiverpoolvSunderland/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20080616 Liverpool v Sunderland" alt="20080616 Liverpool v Sunderland"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/20/20080616LiverpoolvSunderland/" title="20080616 Liverpool v Sunderland">20080616 Liverpool v Sunderland</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-20 15:16:44">2020-07-20</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/13/31ce8f96_1c9eef762/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s1.ax1x.com/2020/05/09/YM80PK.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="117" alt="117"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/13/31ce8f96_1c9eef762/" title="117">117</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-13 17:05:51">2020-07-13</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/08/31ce8f96_1c9e2e549/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/07/08/31ce8f96_1c9e2e549/" title="116">116</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-08 19:16:03">2020-07-08</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/03/31ce8f96_1c9d651e2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="115" alt="115"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/03/31ce8f96_1c9d651e2/" title="115">115</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-03 19:52:10">2020-07-03</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/01/31ce8f96_1c9d1bca9/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="114" alt="114"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/01/31ce8f96_1c9d1bca9/" title="114">114</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-01 20:33:52">2020-07-01</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Photo/"><span class="card-category-list-name">Photo</span><span class="card-category-list-count">19</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Text/"><span class="card-category-list-name">Text</span><span class="card-category-list-count">83</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Video/"><span class="card-category-list-name">Video</span><span class="card-category-list-count">15</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Gernando/" style="font-size: 17.2px; color: #999ca1">Gernando</a> <a href="/tags/Gernando2007logs/" style="font-size: 19px; color: #99a1ac">Gernando2007logs</a> <a href="/tags/Gernando2008logs/" style="font-size: 21.4px; color: #99a7bb">Gernando2008logs</a> <a href="/tags/Gernando2009logs/" style="font-size: 22px; color: #99a9bf">Gernando2009logs</a> <a href="/tags/Gernando2010logs/" style="font-size: 20.8px; color: #99a6b7">Gernando2010logs</a> <a href="/tags/Gernando2011logs/" style="font-size: 17.2px; color: #999ca1">Gernando2011logs</a> <a href="/tags/Gernando2012logs/" style="font-size: 17.2px; color: #999ca1">Gernando2012logs</a> <a href="/tags/Gernando2020logs/" style="font-size: 16px; color: #999">Gernando2020logs</a> <a href="/tags/GernandoArticle/" style="font-size: 17.8px; color: #999ea4">GernandoArticle</a> <a href="/tags/NandoInterviewlogs/" style="font-size: 18.4px; color: #999fa8">NandoInterviewlogs</a> <a href="/tags/gernando/" style="font-size: 19.6px; color: #99a3b0">gernando</a> <a href="/tags/gif/" style="font-size: 16.6px; color: #999b9d">gif</a> <a href="/tags/%E5%8C%85%E6%89%98/" style="font-size: 20.2px; color: #99a4b4">包托</a> <a href="/tags/%E6%9D%B0%E6%89%98/" style="font-size: 20.2px; color: #99a4b4">杰托</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">July 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">June 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">May 2020</span><span class="card-archive-list-count">49</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">April 2020</span><span class="card-archive-list-count">56</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">Article :</div><div class="webinfo-article-count">118</div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://s1.ax1x.com/2020/07/18/UcmKzT.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Gernando logs</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
+if (subtitleEffect) { 
+  var typed = new Typed("#subtitle", {
+    strings: "All My Great Memories In My Head Are Playing Next To Him,It Took Me Maybe 26/27 Years To Meet Fernando Torres.,We Were Made For Each Other.,Nando Was Made For Liverpool.,Liverpool FC Is Gerrard Plus Ten More. He is Mr Liverpool.".split(","),
+    startDelay: 300,
+    typeSpeed: 150,
+    loop: true,
+    backSpeed: 50
+  })
+} else {
+  document.getElementById("subtitle").innerHTML = 'All My Great Memories In My Head Are Playing Next To Him'
+}</script></body></html>
